@@ -1,0 +1,72 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.header .header-layer {
+  opacity: 0.7;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.head-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.head-container .text {
+  margin: 0;
+  font-size: 16pt;
+  line-height: 20pt;
+  z-index: 1;
+}
+
+.head-container .text strong{
+  color: #7FDBFF;
+}
+.head-container .sub-text {
+  font-size: 14pt;
+  line-height: 18pt;
+  margin: 0 0 20px 0;
+}
+.head-container .highlight {
+  color: #FF4136;
+}
+.head-container button {
+  padding:10px;
+  background: transparent;
+}
+.head-container button a{
+  text-decoration: none;
+  color: lavender;
+}
+@media screen and (min-width: 600px) {
+  .head-container .text {
+    font-size: 32pt;
+    line-height: 36pt;
+  }
+  .head-container .sub-text {
+    font-size: 25pt;
+    line-height: 30pt;
+  }
+}
+
+canvas{
+    background-color: #252934;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+}
