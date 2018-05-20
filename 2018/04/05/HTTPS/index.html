@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="http," />
+  <meta name="keywords" content="https," />
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="keywords" content="http">
+<meta name="description" content="HTTP problems May be eavesdropped Http does not have any encryption on data, HTTP packets are sent in clear text.   All data sent and received through internet may be intercepted or peeped.     Certif">
+<meta name="keywords" content="https">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP">
-<meta property="og:url" content="http://yoursite.com/2018/03/14/HTTP/index.html">
+<meta property="og:title" content="HTTPS">
+<meta property="og:url" content="http://yoursite.com/2018/04/05/HTTPS/index.html">
 <meta property="og:site_name" content="Long Wang">
-<meta property="og:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
+<meta property="og:description" content="HTTP problems May be eavesdropped Http does not have any encryption on data, HTTP packets are sent in clear text.   All data sent and received through internet may be intercepted or peeped.     Certif">
 <meta property="og:locale" content="English">
-<meta property="og:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
-<meta property="og:updated_time" content="2018-05-08T21:11:00.000Z">
+<meta property="og:image" content="http://pic002.cnblogs.com/images/2012/38542/2012072310244445.png">
+<meta property="og:updated_time" content="2018-05-20T20:29:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP">
-<meta name="twitter:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="twitter:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
+<meta name="twitter:title" content="HTTPS">
+<meta name="twitter:description" content="HTTP problems May be eavesdropped Http does not have any encryption on data, HTTP packets are sent in clear text.   All data sent and received through internet may be intercepted or peeped.     Certif">
+<meta name="twitter:image" content="http://pic002.cnblogs.com/images/2012/38542/2012072310244445.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/14/HTTP/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/05/HTTPS/"/>
 
 
 
 
 
-  <title>HTTP | Long Wang</title>
+  <title>HTTPS | Long Wang</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/HTTP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/HTTPS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Long Wang">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP</h1>
+          <h1 class="post-title" itemprop="name headline">HTTPS</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-14T13:32:21-07:00">
-                Mar 14 2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-05T17:12:01-07:00">
+                Apr 5 2018
               </time>
             
 
@@ -354,44 +354,53 @@
       
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>HTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of rules how client and server communicate each other.</p>
-<p><img src="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c" alt="Protocols"></p>
-<hr>
-<h2 id="HTTP-1-0"><a href="#HTTP-1-0" class="headerlink" title="HTTP/1.0"></a>HTTP/1.0</h2><ol>
-<li>Introduction</li>
+        <h1 id="HTTP-problems"><a href="#HTTP-problems" class="headerlink" title="HTTP problems"></a>HTTP problems</h1><ol>
+<li>May be eavesdropped<ul>
+<li>Http does not have any encryption on data, HTTP packets are sent in clear text.</li>
+</ul>
+<ul>
+<li>All data sent and received through internet may be intercepted or peeped.</li>
+</ul>
+</li>
 </ol>
-<p>On May 1996, HTTP/1.0 released. First, any format of content could send over internet, not only text, but images, videos, files…etc. This laid the foundation for the thrive of the internet.</p>
 <ol start="2">
-<li><p>Request format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET / HTTP/1.0</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">Accept: */*</span><br></pre></td></tr></table></figure>
+<li><p>Certification issue</p>
+<ul>
+<li>Unable to confirm that the server you are sending to is the real server(maybe the server is disguised)</li>
+<li>Unable to confirm if returned client is a client(maybe the client is disguised) that is receiving as intended.</li>
+<li>Unable to determine whether the other party that is communicating has access rights to some important information on web server. Also failed to prevent DoS(Denial of Service) attacks under massive requests</li>
+</ul>
 </li>
-<li><p>Response format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.0 200 OK</span><br><span class="line">Content-Type: text/plain</span><br><span class="line">Content-Length: 137582</span><br><span class="line">Expires: Thu, 05 Dec 1997 16:00:00 GMT</span><br><span class="line">Last-Modified: Wed, 5 August 1996 15:55:28 GMT</span><br><span class="line">Server: Apache 0.84</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;Hello World&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Content-type<br>character encoding form 1.0 version, header information must be ASCII code, but the remaining could be any format, so when server response, it must let client know what format the data is, so here we have <em class="highlight-blue">Content-Type</em>.</p>
-</li>
-</ol>
-<p>Below are some common use Content-Type.</p>
-<blockquote>
-<p>text/plain<br>text/html<br>text/css<br>image/jpeg<br>image/png<br>image/svg+xml<br>audio/mp4<br>video/mp4<br>application/javascript<br>application/pdf<br>application/zip<br>application/atom+xml</p>
-</blockquote>
-<p>These data types called MIME type.</p>
-<ol start="5">
-<li>Content-encoding<br>Data can be compressed before sending, <em class="highlight-blue">Content-encoding</em> indicate the compress method.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Encoding: compress</span><br><span class="line">Content-Encoding: deflate</span><br></pre></td></tr></table></figure>
+<li><p>May be intercepted</p>
+<ul>
+<li>Data may be intercepted and Modified during the transmit between client and server(Man-in-the-Middle attack)</li>
+</ul>
 </li>
 </ol>
-<h2 id="HTTP-1-1"><a href="#HTTP-1-1" class="headerlink" title="HTTP/1.1"></a>HTTP/1.1</h2><p>Just half year later, On Jan 1997, HTTP/1.1 released. It improved a lot based on 1.0 and it’s been used until today.</p>
+<h1 id="What-is-HTTPS"><a href="#What-is-HTTPS" class="headerlink" title="What is HTTPS"></a>What is HTTPS</h1><ol>
+<li><p>HTTPS(Hyper Text Transfer Protocol over Secure Socket Layer), also known as HTTP over TLS/SSL. HTTPS is a transmission protocol for secure communication over internet. HTTP communicates via HTTP, but use SSL/TLS to encrypt packets. The main purpose of HTTPS development is to provide identity authentication for website servers and to protect the privacy and integrity of exchanged data.</p>
+</li>
+<li><p>SSL/TLS</p>
+<ul>
+<li><p>SSL/TLS use Public-key cryptography, that is, client send request for public key to server first, then use public key to encrypted message, after received this server use private key to decrypt the message. But this bring up two problems:</p>
 <ol>
-<li>persistent connection</li>
+<li><p>How to prevent the public key to be intercepted?</p>
+<p>Put public key in <span class="blue">public key certificate</span>. As long as the certificate is certified, the public key is trusted.</p>
+</li>
+<li><p>Asymmetric encryption involve a lot computation, how to reduce time used?</p>
+<p>Every session, client and server will generate a session key, use it to encrypt message. Because it is symmetrical encryption, and server public key only used to encrypt session key, so it is very fast.<br>So the basic process of SSL/TLS is like this:</p>
+<ol>
+<li>Client send request to server, server put public key in certificate send back to client</li>
+<li>Client validate the certificate from authorized server, if the certificate is valid, client generate random number as session key, then encrypt it with public key send back to servers</li>
+<li>Server use private key to decrypt the message, get the session key, so now client and server can use the same session key to communication.</li>
 </ol>
-<p>One of the problem 1.0 has is that every request needs establish TCP connection, when response send the TCP connection will be shut down. If you want to request another resource, you have to establish another connection, it is very costly when establish a TCP connection. Now the TCP connection will on until there is no activity for a while.</p>
-<ol start="2">
-<li>Pipelining</li>
+</li>
 </ol>
-<p>1.1 introduced pipelining, which client can send multiple requests in one TCP connection. For example, if user want to request 2 resources, in 1.0 they need to send out first request, wait the response of the first then send out second request, but now the user could send them together at the same time, but the server still handle the request one by one by the order received.</p>
-<ol start="3">
-<li>disadvantage<br>As we can see that all the requests are handled one by one, if one request takes long time to response, it will block the requests behind it, this is so called Head-of-line blocking. In order to solve the problem, there are two ways: first is reduce the request number, second is open multiple persistent connection. Because of this, lot web optimization methods can help website loading faster appeared: merge js, css files, put icons in CSS sprite, domain sharding…etc.</li>
+</li>
+</ul>
+</li>
 </ol>
+<p><img src="http://pic002.cnblogs.com/images/2012/38542/2012072310244445.png" alt="alt text"></p>
 
       
     </div>
@@ -409,7 +418,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/http/" rel="tag"># http</a>
+            <a href="/tags/https/" rel="tag"># https</a>
           
         </div>
       
@@ -422,14 +431,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/14/HTTP/" rel="next" title="HTTP">
+                <i class="fa fa-chevron-left"></i> HTTP
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/05/HTTPS/" rel="prev" title="HTTPS">
-                HTTPS <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/01/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -582,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-0"><span class="nav-number">2.</span> <span class="nav-text">HTTP/1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-1"><span class="nav-number">3.</span> <span class="nav-text">HTTP/1.1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP-problems"><span class="nav-number">1.</span> <span class="nav-text">HTTP problems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-HTTPS"><span class="nav-number">2.</span> <span class="nav-text">What is HTTPS</span></a></li></ol></div>
             
 
           </div>
