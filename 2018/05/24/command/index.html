@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="http," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,20 +79,17 @@
 
 
 
-<meta name="description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="keywords" content="http">
+<meta name="description" content="Commonly used commandsTerminal navigation commandsls - Display a list of files and folders under current directory cd &amp;lt;directory&amp;gt; - move in to the directory pwd - Displays the current terminal d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP">
-<meta property="og:url" content="http://yoursite.com/2018/03/14/HTTP/index.html">
+<meta property="og:title" content="Command line">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/command/index.html">
 <meta property="og:site_name" content="Long Wang">
-<meta property="og:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
+<meta property="og:description" content="Commonly used commandsTerminal navigation commandsls - Display a list of files and folders under current directory cd &amp;lt;directory&amp;gt; - move in to the directory pwd - Displays the current terminal d">
 <meta property="og:locale" content="English">
-<meta property="og:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
-<meta property="og:updated_time" content="2018-05-08T21:11:00.000Z">
+<meta property="og:updated_time" content="2018-05-31T06:31:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP">
-<meta name="twitter:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="twitter:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
+<meta name="twitter:title" content="Command line">
+<meta name="twitter:description" content="Commonly used commandsTerminal navigation commandsls - Display a list of files and folders under current directory cd &amp;lt;directory&amp;gt; - move in to the directory pwd - Displays the current terminal d">
 
 
 
@@ -122,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/14/HTTP/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/command/"/>
 
 
 
 
 
-  <title>HTTP | Long Wang</title>
+  <title>Command line | Long Wang</title>
   
 
 
@@ -265,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/HTTP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Long Wang">
@@ -282,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP</h1>
+          <h1 class="post-title" itemprop="name headline">Command line</h1>
         
 
         <div class="post-meta">
@@ -294,8 +291,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-14T13:32:21-07:00">
-                Mar 14 2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T22:32:21-07:00">
+                May 24 2018
               </time>
             
 
@@ -317,8 +314,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
                   </a>
                 </span>
 
@@ -354,45 +351,20 @@
       
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>HTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of rules how client and server communicate each other.</p>
-<p><img src="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c" alt="Protocols"></p>
-<hr>
-<h2 id="HTTP-1-0"><a href="#HTTP-1-0" class="headerlink" title="HTTP/1.0"></a>HTTP/1.0</h2><ol>
-<li>Introduction</li>
-</ol>
-<p>On May 1996, HTTP/1.0 released. First, any format of content could send over internet, not only text, but images, videos, files…etc. This laid the foundation for the thrive of the internet.</p>
-<ol start="2">
-<li><p>Request format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET / HTTP/1.0</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">Accept: */*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Response format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.0 200 OK</span><br><span class="line">Content-Type: text/plain</span><br><span class="line">Content-Length: 137582</span><br><span class="line">Expires: Thu, 05 Dec 1997 16:00:00 GMT</span><br><span class="line">Last-Modified: Wed, 5 August 1996 15:55:28 GMT</span><br><span class="line">Server: Apache 0.84</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;Hello World&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Content-type<br>character encoding form 1.0 version, header information must be ASCII code, but the remaining could be any format, so when server response, it must let client know what format the data is, so here we have <em class="highlight-blue">Content-Type</em>.</p>
-</li>
-</ol>
-<p>Below are some common use Content-Type.</p>
-<blockquote>
-<p>text/plain<br>text/html<br>text/css<br>image/jpeg<br>image/png<br>image/svg+xml<br>audio/mp4<br>video/mp4<br>application/javascript<br>application/pdf<br>application/zip<br>application/atom+xml</p>
-</blockquote>
-<p>These data types called MIME type.</p>
-<ol start="5">
-<li>Content-encoding<br>Data can be compressed before sending, <em class="highlight-blue">Content-encoding</em> indicate the compress method.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Encoding: compress</span><br><span class="line">Content-Encoding: deflate</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="HTTP-1-1"><a href="#HTTP-1-1" class="headerlink" title="HTTP/1.1"></a>HTTP/1.1</h2><p>Just half year later, On Jan 1997, HTTP/1.1 released. It improved a lot based on 1.0 and it’s been used until today.</p>
-<ol>
-<li>persistent connection</li>
-</ol>
-<p>One of the problem 1.0 has is that every request needs establish TCP connection, when response send the TCP connection will be shut down. If you want to request another resource, you have to establish another connection, it is very costly when establish a TCP connection. Now the TCP connection will on until there is no activity for a while.</p>
-<ol start="2">
-<li>Pipelining</li>
-</ol>
-<p>1.1 introduced pipelining, which client can send multiple requests in one TCP connection. For example, if user want to request 2 resources, in 1.0 they need to send out first request, wait the response of the first then send out second request, but now the user could send them together at the same time, but the server still handle the request one by one by the order received.</p>
-<ol start="3">
-<li>disadvantage<br>As we can see that all the requests are handled one by one, if one request takes long time to response, it will block the requests behind it, this is so called Head-of-line blocking. In order to solve the problem, there are two ways: first is reduce the request number, second is open multiple persistent connection. Because of this, lot web optimization methods can help website loading faster appeared: merge js, css files, put icons in CSS sprite, domain sharding…etc.</li>
-</ol>
-
+        <h1 id="Commonly-used-commands"><a href="#Commonly-used-commands" class="headerlink" title="Commonly used commands"></a>Commonly used commands</h1><h2 id="Terminal-navigation-commands"><a href="#Terminal-navigation-commands" class="headerlink" title="Terminal navigation commands"></a>Terminal navigation commands</h2><p><code>ls</code> - Display a list of files and folders under current directory</p>
+<p><code>cd &lt;directory&gt;</code> - move in to the directory</p>
+<p><code>pwd</code> - Displays the current terminal directory as an absolute path</p>
+<p><code>history</code> - Displays a list of recently used commands</p>
+<h2 id="File-management-commands"><a href="#File-management-commands" class="headerlink" title="File management commands"></a>File management commands</h2><p><code>cat &lt;fileName&gt;</code> - display contents of the file</p>
+<p><code>touch &lt;fileName&gt;</code> - create a new files</p>
+<p><code>cp &lt;from&gt; &lt;to&gt;</code> - copy the file from current directory to target directory</p>
+<p><code>mv &lt;from&gt; &lt;to&gt;</code> - move the file from current directory to target directory</p>
+<p><code>find</code> - Searches a specific directory to find files that match a given set of criteria</p>
+<p><code>grep</code> - Searches a specific file or set of files to see if a given string of text exists, and if it does, tell you where the text exists in those files.</p>
+<p><code>mkdir &lt;directoryName&gt;</code> - create a new directory</p>
+<p><code>rmdir &lt;directoryName&gt;</code> - remove the directory</p>
+<p><code>rm &lt;fileName&gt;</code> - remove file, be careful this will remove the file from your hard drive forever.</p>
+<h2 id="File-management-commands-1"><a href="#File-management-commands-1" class="headerlink" title="File management commands"></a>File management commands</h2>
       
     </div>
     
@@ -407,12 +379,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/http/" rel="tag"># http</a>
-          
-        </div>
-      
 
       
       
@@ -422,15 +388,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/04/fontSize/" rel="next" title="Font size">
+                <i class="fa fa-chevron-left"></i> Font size
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/05/HTTPS/" rel="prev" title="HTTPS">
-                HTTPS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -582,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-0"><span class="nav-number">2.</span> <span class="nav-text">HTTP/1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-1"><span class="nav-number">3.</span> <span class="nav-text">HTTP/1.1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Commonly-used-commands"><span class="nav-number">1.</span> <span class="nav-text">Commonly used commands</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminal-navigation-commands"><span class="nav-number">1.1.</span> <span class="nav-text">Terminal navigation commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-management-commands"><span class="nav-number">1.2.</span> <span class="nav-text">File management commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-management-commands-1"><span class="nav-number">1.3.</span> <span class="nav-text">File management commands</span></a></li></ol></li></ol></div>
             
 
           </div>
