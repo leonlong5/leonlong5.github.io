@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="http," />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -79,20 +79,23 @@
 
 
 
-<meta name="description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="keywords" content="http">
+<meta name="description" content="Page layoutsWhen discussing a page layout, I was embarrassed because I did not really learned that formally. I learned to create fixed, responsive web page layout by using float, min-width, percentage">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP">
-<meta property="og:url" content="http://yoursite.com/2018/03/14/HTTP/index.html">
+<meta property="og:title" content="Page layouts by CSS">
+<meta property="og:url" content="http://yoursite.com/2018/06/05/pagelayout/index.html">
 <meta property="og:site_name" content="Long Wang">
-<meta property="og:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
+<meta property="og:description" content="Page layoutsWhen discussing a page layout, I was embarrassed because I did not really learned that formally. I learned to create fixed, responsive web page layout by using float, min-width, percentage">
 <meta property="og:locale" content="English">
-<meta property="og:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
-<meta property="og:updated_time" content="2018-05-08T21:11:00.000Z">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1000/1*dUZudP2xfPLzMiw5L8ieTQ.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1000/1*Hul4o5D73lpzVeVTk2Cuag.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1000/1*LP6jyJPC17EVOk8nKEHYzg.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1000/1*jGg5Y0CIZSGSTDTabsarbQ.gif">
+<meta property="og:updated_time" content="2018-06-06T06:47:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP">
-<meta name="twitter:description" content="IntroductionHTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of">
-<meta name="twitter:image" content="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c">
+<meta name="twitter:title" content="Page layouts by CSS">
+<meta name="twitter:description" content="Page layoutsWhen discussing a page layout, I was embarrassed because I did not really learned that formally. I learned to create fixed, responsive web page layout by using float, min-width, percentage">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1000/1*dUZudP2xfPLzMiw5L8ieTQ.gif">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/14/HTTP/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/05/pagelayout/"/>
 
 
 
 
 
-  <title>HTTP | Long Wang</title>
+  <title>Page layouts by CSS | Long Wang</title>
   
 
 
@@ -265,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/HTTP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/05/pagelayout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Long Wang">
@@ -282,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP</h1>
+          <h1 class="post-title" itemprop="name headline">Page layouts by CSS</h1>
         
 
         <div class="post-meta">
@@ -294,8 +297,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-14T13:32:21-07:00">
-                Mar 14 2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-05T19:06:23-07:00">
+                Jun 5 2018
               </time>
             
 
@@ -317,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
+                  <a href="/categories/FrontEnd/" itemprop="url" rel="index">
+                    <span itemprop="name">FrontEnd</span>
                   </a>
                 </span>
 
@@ -354,44 +357,18 @@
       
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>HTTP protocols(HyperText Transfer Protocol) is an application layer protocols that we use a lot while building a web application. It does not involving any packet transmit, it is a set of rules how client and server communicate each other.</p>
-<p><img src="https://qph.fs.quoracdn.net/main-qimg-73f6df0ee91fc80da5b021bd43e8f762-c" alt="Protocols"></p>
-<hr>
-<h2 id="HTTP-1-0"><a href="#HTTP-1-0" class="headerlink" title="HTTP/1.0"></a>HTTP/1.0</h2><ol>
-<li>Introduction</li>
-</ol>
-<p>On May 1996, HTTP/1.0 released. First, any format of content could send over internet, not only text, but images, videos, files…etc. This laid the foundation for the thrive of the internet.</p>
-<ol start="2">
-<li><p>Request format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET / HTTP/1.0</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">Accept: */*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Response format</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.0 200 OK</span><br><span class="line">Content-Type: text/plain</span><br><span class="line">Content-Length: 137582</span><br><span class="line">Expires: Thu, 05 Dec 1997 16:00:00 GMT</span><br><span class="line">Last-Modified: Wed, 5 August 1996 15:55:28 GMT</span><br><span class="line">Server: Apache 0.84</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;Hello World&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Content-type<br>character encoding form 1.0 version, header information must be ASCII code, but the remaining could be any format, so when server response, it must let client know what format the data is, so here we have <em class="highlight-blue">Content-Type</em>.</p>
-</li>
-</ol>
-<p>Below are some common use Content-Type.</p>
+        <h1 id="Page-layouts"><a href="#Page-layouts" class="headerlink" title="Page layouts"></a>Page layouts</h1><p>When discussing a page layout, I was embarrassed because I did not really learned that formally. I learned to create fixed, responsive web page layout by using float, min-width, percentage…etc, but I never learned the concepts and have no idea what is adaptive, fluid layouts, I think I need a big picture so I went looking.</p>
 <blockquote>
-<p>text/plain<br>text/html<br>text/css<br>image/jpeg<br>image/png<br>image/svg+xml<br>audio/mp4<br>video/mp4<br>application/javascript<br>application/pdf<br>application/zip<br>application/atom+xml</p>
+<p>Nick said: “In short, each page layout name describes how the layout behaves when the page is viewed at different browser widths. Because the web page is been viewed from different devices width different width.”</p>
 </blockquote>
-<p>These data types called MIME type.</p>
-<ol start="5">
-<li>Content-encoding<br>Data can be compressed before sending, <em class="highlight-blue">Content-encoding</em> indicate the compress method.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Encoding: compress</span><br><span class="line">Content-Encoding: deflate</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="HTTP-1-1"><a href="#HTTP-1-1" class="headerlink" title="HTTP/1.1"></a>HTTP/1.1</h2><p>Just half year later, On Jan 1997, HTTP/1.1 released. It improved a lot based on 1.0 and it’s been used until today.</p>
-<ol>
-<li>persistent connection</li>
-</ol>
-<p>One of the problem 1.0 has is that every request needs establish TCP connection, when response send the TCP connection will be shut down. If you want to request another resource, you have to establish another connection, it is very costly when establish a TCP connection. Now the TCP connection will on until there is no activity for a while.</p>
-<ol start="2">
-<li>Pipelining</li>
-</ol>
-<p>1.1 introduced pipelining, which client can send multiple requests in one TCP connection. For example, if user want to request 2 resources, in 1.0 they need to send out first request, wait the response of the first then send out second request, but now the user could send them together at the same time, but the server still handle the request one by one by the order received.</p>
-<ol start="3">
-<li>disadvantage<br>As we can see that all the requests are handled one by one, if one request takes long time to response, it will block the requests behind it, this is so called Head-of-line blocking. In order to solve the problem, there are two ways: first is reduce the request number, second is open multiple persistent connection. Because of this, lot web optimization methods can help website loading faster appeared: merge js, css files, put icons in CSS sprite, domain sharding…etc.</li>
-</ol>
+<p>There are total four types of page layout: static, fluid, adaptive, responsive.</p>
+<h2 id="Static-Page-Layout"><a href="#Static-Page-Layout" class="headerlink" title="Static Page Layout"></a>Static Page Layout</h2><p>Static page layout, also called fixed width layout. So the elements has a fixed preset width no matter how you resize the browser. This is not commonly used but it’s a good start to learn web layouts.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*dUZudP2xfPLzMiw5L8ieTQ.gif" alt="Static layout gif"></p>
+<h2 id="Liquid-Page-Layout"><a href="#Liquid-Page-Layout" class="headerlink" title="Liquid Page Layout"></a>Liquid Page Layout</h2><p>A liquid page layout, also called fluid width layout. Basically a liquid layout will use percentages instead of pixels, so the container will always occupy that much percentage space on the screen. But there are some major drawbacks at very large or very small browser widths. For example, if the browser is very large, some container could be stretched too far, a single paragraph might run across the page on a single line. Conversely, a paragraph on a small screen could be too crowded.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*Hul4o5D73lpzVeVTk2Cuag.gif" alt="Liquid page layout"></p>
+<h2 id="Adaptive-Page-Layout"><a href="#Adaptive-Page-Layout" class="headerlink" title="Adaptive Page Layout"></a>Adaptive Page Layout</h2><p>A adaptive page layout means there are several versions of layout displayed based on screen size of the viewer. It is achieved by use CSS media query to detect the width of the browser and apply CSS rules accordingly. The benefit is that the page will load faster since it uses mobile first approach, which means browser will only load the additional CSS when your browser reach the break point width.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*LP6jyJPC17EVOk8nKEHYzg.gif" alt="Adaptive page layout"></p>
+<h2 id="Responsive-Page-Layout"><a href="#Responsive-Page-Layout" class="headerlink" title="Responsive Page Layout"></a>Responsive Page Layout</h2><p>Responsive page layout uses both liquid and adaptive layout design. There are several break-points to separate your layouts for different browser/device width. As a browser increase or decrease, the elements will stretch or shrink accordingly.<br><img src="https://cdn-images-1.medium.com/max/1000/1*jGg5Y0CIZSGSTDTabsarbQ.gif" alt="Responsive page layout"></p>
 
       
     </div>
@@ -409,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/http/" rel="tag"># http</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
         </div>
       
@@ -422,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/14/Java_collections/" rel="next" title="Java collections">
-                <i class="fa fa-chevron-left"></i> Java collections
+              <a href="/2018/06/04/centering in CSS/" rel="next" title="Centering in CSS">
+                <i class="fa fa-chevron-left"></i> Centering in CSS
               </a>
             
           </div>
@@ -431,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/05/HTTPS/" rel="prev" title="HTTPS">
-                HTTPS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -586,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-0"><span class="nav-number">2.</span> <span class="nav-text">HTTP/1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-1"><span class="nav-number">3.</span> <span class="nav-text">HTTP/1.1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Page-layouts"><span class="nav-number">1.</span> <span class="nav-text">Page layouts</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Static-Page-Layout"><span class="nav-number">1.1.</span> <span class="nav-text">Static Page Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Liquid-Page-Layout"><span class="nav-number">1.2.</span> <span class="nav-text">Liquid Page Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adaptive-Page-Layout"><span class="nav-number">1.3.</span> <span class="nav-text">Adaptive Page Layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Responsive-Page-Layout"><span class="nav-number">1.4.</span> <span class="nav-text">Responsive Page Layout</span></a></li></ol></li></ol></div>
             
 
           </div>
