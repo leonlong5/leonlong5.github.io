@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="English">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="React Native," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="React native Flat ListRecently I worked on a small APP with React Native in dora hackathon, find it is really fun to write Apps with react, so I dive a little bit in it these days, today let’s take a">
+<meta name="keywords" content="React Native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native Flat List demo">
+<meta property="og:url" content="http://yoursite.com/2018/07/01/ReactNativeFlatList/index.html">
+<meta property="og:site_name" content="Long Wang">
+<meta property="og:description" content="React native Flat ListRecently I worked on a small APP with React Native in dora hackathon, find it is really fun to write Apps with react, so I dive a little bit in it these days, today let’s take a">
+<meta property="og:locale" content="English">
+<meta property="og:image" content="http://yoursite.com/2018/07/01/ReactNativeFlatList/img/flatlist.png">
+<meta property="og:updated_time" content="2018-07-01T20:21:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native Flat List demo">
+<meta name="twitter:description" content="React native Flat ListRecently I worked on a small APP with React Native in dora hackathon, find it is really fun to write Apps with react, so I dive a little bit in it these days, today let’s take a">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/01/ReactNativeFlatList/img/flatlist.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/01/ReactNativeFlatList/"/>
+
+
+
+
+
+  <title>React Native Flat List demo | Long Wang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="English">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Long Wang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Front-end engineer</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-blog">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            blog
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/01/ReactNativeFlatList/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Long Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/775203_204535846367119_559553309_o.jpg?_nc_cat=0&oh=158cb6b68519998a1ac6fbb46aaba862&oe=5B9132C2">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Long Wang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React Native Flat List demo</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T11:00:52-07:00">
+                Jul 1 2018
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="React-native-Flat-List"><a href="#React-native-Flat-List" class="headerlink" title="React native Flat List"></a>React native Flat List</h1><p>Recently I worked on a small APP with React Native in dora hackathon, find it is really fun to write Apps with react, so I dive a little bit in it these days, today let’s take a look at a Flat List demo to see how to render a list in React Native.<br>Demo address: <a href="https://snack.expo.io/@leonlong/flatlistdemo" target="_blank" rel="noopener">https://snack.expo.io/@leonlong/flatlistdemo</a></p>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><p>First we need to initialize a react native project, I used create-react-native-app to initialize this demo, as you can see from the code we imported the components we needed from react-native<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; StyleSheet, Text, View, Button, FlatList, RefreshControl, ActivityIndicator&#125; from &apos;react-native&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>Then we initialize the cities data for the demo and created a class from react component, this is very similar to react, if you are familiar with react before, this will be easy for you to understand. Below is the basic example of a react native component.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">export default class List extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">        &lt;Text&gt;This is list page!&lt;/Text&gt;</span><br><span class="line">      &lt;/View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Render-the-list"><a href="#Render-the-list" class="headerlink" title="Render the list"></a>Render the list</h2><p>Now we can start create a flat list by using the Component FlatList.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>It has some props for us to use, I will introduce the basics, for more you can refer to <a href="https://facebook.github.io/react-native/docs/flatlist" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/flatlist</a></p>
+<blockquote>
+<p>data</p>
+</blockquote>
+<p>We prepared some data for us to use, an array of cities, each object contains city name and population.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const CITIES = [&#123;city: &apos;New York&apos;, population:8550405&#125;,</span><br><span class="line">      &#123;city: &apos;Los Angeles&apos;, population:	3971883&#125;,</span><br><span class="line">      &#123;city: &apos;Chicago&apos;, population: 2720546&#125;,</span><br><span class="line">      ...]</span><br></pre></td></tr></table></figure></p>
+<p>Now we can add the data to flat list.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList</span><br><span class="line">          data = &#123;CITIES&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Usually we will put this in state for easy manipulation for later.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList</span><br><span class="line">          data = &#123;this.state.dataArray&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Next we use the renderItem to render the list of items.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList</span><br><span class="line">          data = &#123;CITIES&#125;</span><br><span class="line">          renderItem = &#123;(data) =&gt; this._renderItem(data)&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>also created the function to do the job.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_renderItem(data) &#123;</span><br><span class="line">  return &lt;View style=&#123;styles.item&#125; id=&#123;data.item.id&#125;&gt;</span><br><span class="line">          &lt;Text style=&#123;styles.text&#125;&gt;City: &#123;data.item.city&#125; ;&lt;/Text&gt;</span><br><span class="line">          &lt;Text style=&#123;styles.text&#125;&gt;Population: &#123;data.item.population&#125;&lt;/Text&gt;</span><br><span class="line">         &lt;/View&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Pull-down-reloading"><a href="#Pull-down-reloading" class="headerlink" title="Pull down reloading"></a>Pull down reloading</h2><p>Now we have the list of cities in the App</p>
+<p><img src="img/flatlist.png" alt="drawing" width="200px"></p>
+<p>Next we will add realoding when user swipe down at the top of the screen for the list.<br>we will use RefreshControl component to build this feature.</p>
+<blockquote>
+<p>title</p>
+</blockquote>
+<p>The text showing when reloading</p>
+<blockquote>
+<p>tintColor</p>
+</blockquote>
+<p>The color of the animated circle</p>
+<blockquote>
+<p>refreshing</p>
+</blockquote>
+<p>Set this to true when waiting for new data from a refresh</p>
+<blockquote>
+<p>onRefresh</p>
+</blockquote>
+<p>the function that invoked when refresh been triggered by user</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList</span><br><span class="line">          data = &#123;this.state.dataArray&#125;</span><br><span class="line">          renderItem = &#123;(data) =&gt; this._renderItem(data)&#125;</span><br><span class="line"></span><br><span class="line">          refreshControl = &#123;</span><br><span class="line">            &lt;RefreshControl</span><br><span class="line">            title = &#123;&apos;Loading&apos;&#125;</span><br><span class="line">            tintColor=&#123;&apos;orange&apos;&#125;</span><br><span class="line">            refreshing = &#123;this.state.isLoading&#125;</span><br><span class="line">            //refresh logic</span><br><span class="line">            onRefresh = &#123;() =&gt; &#123;</span><br><span class="line">              this.loadData(true);</span><br><span class="line">            &#125;&#125;  </span><br><span class="line">            /&gt;</span><br><span class="line">          &#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p>In the loadData funciton, it will first set the isLoading to true, to let the animated circle woking to let user know it is loading, then you will need to fetch the data from API to update the data, here for demostration we just reversed the array, last don’t forget to set the isLoading to false, otherwise the waiting circle will keep spining.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">loadData() &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      isLoading: true</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    setTimeout(()=&gt;&#123;</span><br><span class="line">      let dataArray = [];</span><br><span class="line">        for (let i = this.state.dataArray.length-1; i&gt;=0; i--) &#123;</span><br><span class="line">          dataArray.push(this.state.dataArray[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    this.setState(&#123;</span><br><span class="line">        dataArray: dataArray,</span><br><span class="line">        isLoading: false</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="Reach-end-loading-more"><a href="#Reach-end-loading-more" class="headerlink" title="Reach end loading more"></a>Reach end loading more</h2><p>Our last step is to use ListFooterComponent to build a lazy loading for the list. First we need to add ListFooterComponent and onEndReached to FlatList.</p>
+<blockquote>
+<p>ListFooterComponent</p>
+</blockquote>
+<p>It will be used to build the loading footer component while user is waiting.</p>
+<blockquote>
+<p>onRefresh</p>
+</blockquote>
+<p>This function will be invoked when user reached the end of the page.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;FlatList</span><br><span class="line">          data = &#123;this.state.dataArray&#125;</span><br><span class="line">          renderItem = &#123;(data) =&gt; this._renderItem(data)&#125;</span><br><span class="line"></span><br><span class="line">          refreshControl = &#123;</span><br><span class="line">            &lt;RefreshControl</span><br><span class="line">            title = &#123;&apos;Loading&apos;&#125;</span><br><span class="line">            color=&#123;[&apos;red&apos;]&#125;</span><br><span class="line">            tintColor=&#123;&apos;orange&apos;&#125;</span><br><span class="line">            refreshing = &#123;this.state.isLoading&#125;</span><br><span class="line">            onRefresh = &#123;() =&gt; &#123;</span><br><span class="line">              this.loadData(true);</span><br><span class="line">            &#125;&#125;  </span><br><span class="line">            /&gt;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          ListFooterComponent = &#123;() =&gt; this.genIndicator()&#125;</span><br><span class="line">          onEndReached=&#123;() =&gt; &#123;</span><br><span class="line">            this.loadData()</span><br><span class="line">          &#125;&#125;</span><br><span class="line">        /&gt;</span><br></pre></td></tr></table></figure>
+<p>In the genIndicator function, we returned a View with ActivityIndicator component, it has some customized attributes for us to use.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">genIndicator() &#123;</span><br><span class="line">    return &lt;View style=&#123;styles.indicatorContainer&#125;&gt;</span><br><span class="line">              &lt;ActivityIndicator</span><br><span class="line">                style=&#123;styles.indicator&#125;</span><br><span class="line">                size=&#123;&apos;large&apos;&#125;</span><br><span class="line">                color=&#123;&apos;red&apos;&#125;</span><br><span class="line">                animating=&#123;true&#125;</span><br><span class="line">              /&gt;</span><br><span class="line">              &lt;Text&gt;Loading more...&lt;/Text&gt;</span><br><span class="line">          &lt;/View&gt;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>In the loadData function, we need to add an argument to distinguish refreshing and loading more, when loading more is triggered, for demonstration purpose, we will append the CITIES to the end of the list.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">loadData(refreshing) &#123;</span><br><span class="line">    if (refreshing) &#123;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        isLoading: true</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    setTimeout(()=&gt;&#123;</span><br><span class="line">      let dataArray = [];</span><br><span class="line">      if (refreshing) &#123;</span><br><span class="line">        for (let i = this.state.dataArray.length-1; i&gt;=0; i--) &#123;</span><br><span class="line">          dataArray.push(this.state.dataArray[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        dataArray = this.state.dataArray.concat(CITIES)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        dataArray: dataArray,</span><br><span class="line">        isLoading: false</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React-Native/" rel="tag"># React Native</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/09/coolbackgrounds/" rel="next" title="Interesting things the week">
+                <i class="fa fa-chevron-left"></i> Interesting things the week
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t31.0-8/775203_204535846367119_559553309_o.jpg?_nc_cat=0&oh=158cb6b68519998a1ac6fbb46aaba862&oe=5B9132C2"
+                alt="Long Wang" />
+            
+              <p class="site-author-name" itemprop="name">Long Wang</p>
+              <p class="site-description motion-element" itemprop="description">Hi there, this is my persnal blog website.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/leonlong5" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:long.wang56@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#React-native-Flat-List"><span class="nav-number">1.</span> <span class="nav-text">React native Flat List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization"><span class="nav-number">1.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Render-the-list"><span class="nav-number">1.2.</span> <span class="nav-text">Render the list</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pull-down-reloading"><span class="nav-number">1.3.</span> <span class="nav-text">Pull down reloading</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reach-end-loading-more"><span class="nav-number">1.4.</span> <span class="nav-text">Reach end loading more</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Long Wang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
