@@ -1,6 +1,6 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+  font-family: 'Raleway', sans-serif !important; 
+  text-align: center !important;
 }
 
 .header {
@@ -66,12 +66,103 @@ canvas{
     background-color: #252934;
 }
 
+.infor {
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+}
+.profileIMG{
+  
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+
+}
+.about {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  font-weight: bold;
+  color: #7FDBFF;
+}
+
+.profile {
+  display: inline-block;
+  width: 49%;
+}
+.profile h2 {
+
+}
+.profile h4 {
+
+}
+.profile p{
+  padding-left:15%;
+  padding-right:15%;
+}
+/*--------------------- skills  --------------------*/
+.skills {
+  display: inline-block;
+  width : 50%;
+  padding: 10px;
+}
+.progress{
+  width:100%;
+  margin-top:10px;
+  margin-bottom: 10px;
+
+  height: 30px !important;
+  font-size: 1em;
+  line-height: 30px;
+}
+.skills span {
+  width: 10%;
+}
+
+.skills_title{
+  font-size:30px;
+  color: #7FDBFF;
+}
+.skills_title i{
+  margin-right: 10px;
+}
+/*--------------------- projects  --------------------*/
+
+.projects{
+  height: 100vh;
+  background: lightcoral
+}
+
 footer {
   width: 100%;
   height: 300px;
-  background: #159957;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1F1C2C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* colors */
+
+.bg-lightblue{
+  background-color: lightsalmon !important;
+}
+
+.icon_profile {
+  position: relative;
+  top: 5px;
+  right: 10px;
+  font-size:30px;
+  color: #7FDBFF;
+}
