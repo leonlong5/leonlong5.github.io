@@ -25,7 +25,8 @@
     <div class="head-container">
       <p class="text">Hello, I am <strong>Long Wang</strong></p>
       <p class="sub-text">I am a <span class="highlight">full-stack</span> software engineer</p>
-      <button><a href="/tags">View my blog</a></button>
+      <button>Scroll Down</button>
+      <!-- <button><a href="/tags">View my blog</a></button> -->
     </div>
     <canvas id="nokey" width="1200" height="800">
       Your Browser Don't Support Canvas, Please Download Chrome ^_^``
@@ -33,7 +34,7 @@
   </section>
 
   <section class="infor">
-    <h1 class="about slideanim">ABOUT</h1>
+    <h1 class="about slideanim">ABOUT<span class='underline'></span></h1>
     <div class="profile slideanim">
         <img src="https://lh3.googleusercontent.com/-BZQe85-afEo/U_AmlPZpRgI/AAAAAAAAABc/yXBjnjfWiXMq113br_PN-c8fLnNmC0XVwCEwYBhgL/w280-h278-p/969479_204535846367119_559553309_n.jpg" class="profileIMG" alt="...">     
         <h2>Long Wang</h2>
@@ -85,7 +86,7 @@
   </section>
 
   <section class="projects">
-        <h1 class="about slideanim">Projects</h1>
+        <h1 class="about slideanim">Projects<span class='underline'></span></h1>
         <div>
             <div class="img_container_left">
                 <img class='grow' src="./img/WatchableHomePage.png" />
@@ -99,8 +100,22 @@
             <div class="clearfix"></div>
         </div>
   </section>
-
-  <footer class="clearfix">Contact:</footer>
+  
+  <footer class="clearfix">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+            <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+        </svg>
+        <div class="foot-container">
+                <h1 class="about slideanim">Contact<span class='underline'></span></h1>
+                <p class="text"><i class="fas fa-envelope"></i><strong>Email</strong>: long.wang56@gmail.com</p>
+                <p class="text"><i class="fas fa-mobile"></i><strong>Mobile</strong>: 305-498-7195</p>
+                <p class="text"><i class="fab fa-linkedin"></i><strong>Linkedin</strong>: https://www.linkedin.com/in/long-wang/</p>
+                <p class="text"><i class="fab fa-facebook-square"></i><strong>Facebook</strong>: <span class="heightlighted"><a href="https://www.facebook.com/long.wang.31392">Facebook</a></span></p>
+                <p class="text"><i class="fas fa-home"></i><strong>Address</strong>: Union City, CA</p>
+                <!-- <button><a href="/tags">View my blog</a></button> -->
+        </div>
+        <p class="creater">Long Wang ©2018</p>
+  </footer>
 
 
 
@@ -179,7 +194,6 @@ function randomArrayItem(arr){
 function randomNumFrom(min, max){
  return Math.random()*(max - min) + min;
 }
-console.log(randomNumFrom(0, 10));
 // Random Ball
 function getRandomBall(){
  var pos = randomArrayItem(['top', 'right', 'bottom', 'left']);
@@ -350,7 +364,6 @@ function initCanvas(){
 }
 
 window.addEventListener('resize', function(e){
- console.log('Window Resize...');
  initCanvas();
 });
 
@@ -363,12 +376,10 @@ goMovie();
 
 // Mouse effect
 canvas.addEventListener('mouseenter', function(){
- console.log('mouseenter');
  mouse_in = true;
  balls.push(mouse_ball);
 });
 canvas.addEventListener('mouseleave', function(){
- console.log('mouseleave');
  mouse_in = false;
  var new_balls = [];
  Array.prototype.forEach.call(balls, function(b){
