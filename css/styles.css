@@ -88,6 +88,7 @@ canvas{
 .profile {
   display: inline-block;
   width: 49%;
+  
 }
 .profile h2 {
 
@@ -129,17 +130,59 @@ canvas{
 
 .projects{
   height: 100vh;
-  background: lightcoral
+  min-height: 2300px;
+}
+
+.img_container_left{
+  display: inline-block;
+  width: 67%;
+  vertical-align: top;
+  text-align: right
+}
+
+.img_container_left img{
+  max-width: 891px;
+  width: 100%;
+}
+
+.img_container_right {
+  display: inline-block;
+  width: 32%;
+  text-align: left;
+}
+
+.img_container_right img{
+  max-width: 394px;
+  width:100%;
+  margin-left: 10px;
+}
+
+.img_container_left img{
+  display: inline-block;
+  height: 100%;
+}
+.img_container_right img{
+  display: inline-block;
+  height: 100%;
+}
+
+.not_first{
+  margin-top: 10px;
 }
 
 footer {
   width: 100%;
   height: 300px;
-  background: #1F1C2C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #252934;  /* fallback for old browsers */
 }
 
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 
@@ -165,4 +208,40 @@ footer {
   right: 10px;
   font-size:30px;
   color: #7FDBFF;
+}
+
+/* image grow */
+.grow { transition: all .2s ease-in-out; }
+.grow:hover
+{
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+}
+
+
+/*sliding in effects*/
+.slideanim {
+  visibility:hidden;
+  visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+  visibility: visible;                  
+  animation: slide 1s;
+}
+.slideanim::after {
+  /* useful when its child elements are float:left; */
+  content: "";
+  display: table;
+  clear: both;
+}
+@keyframes slide {
+  0% {
+      opacity: 0;
+      transform: translateY(50%);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  } 
 }
