@@ -1,6 +1,6 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+  font-family: 'Raleway', sans-serif !important; 
+  text-align: center !important;
 }
 
 .header {
@@ -47,7 +47,7 @@ body {
   padding:10px;
   background: transparent;
 }
-.head-container button a{
+.head-container button {
   text-decoration: none;
   color: lavender;
 }
@@ -66,7 +66,230 @@ canvas{
     background-color: #252934;
 }
 
+.infor {
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+}
+.profileIMG{
+  
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+
+}
+.about {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  font-weight: bold;
+  color: darkgray;
+}
+
+.profile {
+  display: inline-block;
+  width: 49%;
+  
+}
+.profile h2 {
+
+}
+.profile h4 {
+
+}
+.profile p{
+  padding-left:15%;
+  padding-right:15%;
+}
+/*--------------------- skills  --------------------*/
+.skills {
+  display: inline-block;
+  width : 50%;
+  padding: 10px;
+}
+.progress{
+  width:100%;
+  margin-top:10px;
+  margin-bottom: 10px;
+
+  height: 30px !important;
+  font-size: 1em;
+  line-height: 30px;
+}
+.skills span {
+  width: 10%;
+}
+
+.skills_title{
+  font-size:30px;
+  color: darkgray;
+}
+.skills_title i{
+  margin-right: 10px;
+}
+/*--------------------- projects  --------------------*/
+
+.projects{
+  height: 100vh;
+  min-height: 2300px;
+}
+
+.img_container_left{
+  display: inline-block;
+  width: 67%;
+  vertical-align: top;
+  text-align: right
+}
+
+.img_container_left img{
+  max-width: 891px;
+  width: 100%;
+}
+
+.img_container_right {
+  display: inline-block;
+  width: 32%;
+  text-align: left;
+}
+
+.img_container_right img{
+  max-width: 394px;
+  width:100%;
+  margin-left: 10px;
+}
+
+.img_container_left img{
+  display: inline-block;
+  height: 100%;
+}
+.img_container_right img{
+  display: inline-block;
+  height: 100%;
+}
+
+.not_first{
+  margin-top: 10px;
+}
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* footer section */
 footer {
   width: 100%;
-  height: 300px;
+  background-color: #252934;
+}
+.foot-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.foot-container .text {
+  margin: 0;
+  font-size: 16pt;
+  line-height: 20pt;
+  z-index: 1;
+  color: lavender;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.foot-container .text i{
+  height: 30px;
+  width: 30px;
+}
+
+.foot-container .text strong{
+  color: #04C2C9;
+}
+.foot-container .sub-text {
+  font-size: 14pt;
+  line-height: 18pt;
+  margin: 0 0 20px 0;
+}
+.foot-container .highlight {
+  color: #FF4136;
+}
+.foot-container button {
+  padding:10px;
+  background: transparent;
+}
+.foot-container button {
+  text-decoration: none;
+  color: lavender;
+}
+
+footer .creater{
+  color: wheat;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin: 0
+}
+
+
+
+
+
+
+
+/* colors */
+.underline {
+  width: 40px;
+  height: 5px;
+  background-color: darkgray;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.bg-lightblue{
+  background-color: lightsalmon !important;
+}
+
+.icon_profile {
+  position: relative;
+  top: 5px;
+  right: 10px;
+  font-size:30px;
+  color: #7FDBFF;
+}
+
+/* image grow */
+.grow { transition: all .2s ease-in-out; }
+.grow:hover
+{
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+}
+
+
+/*sliding in effects*/
+.slideanim {
+  visibility:hidden;
+  visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+  visibility: visible;                  
+  animation: slide 1s;
+}
+.slideanim::after {
+  /* useful when its child elements are float:left; */
+  content: "";
+  display: table;
+  clear: both;
+}
+@keyframes slide {
+  0% {
+      opacity: 0;
+      transform: translateY(50%);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  } 
 }
