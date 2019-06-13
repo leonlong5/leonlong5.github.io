@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Commonly used commandsCommands in linux system are widely used in our daily work nowadays, so let’s take look at the most commonly used commands, refresh memory and pick up some learned but never used">
+<meta name="description" content="IntroductionPromise object is a solution for javascript asynchronous operation, provided a unified interface, It is like a proxy, act as an intermediary between asynchronous operations and callback fu">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Command line">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/command/index.html">
+<meta property="og:title" content="Promise">
+<meta property="og:url" content="http://yoursite.com/2018/08/04/Promise/index.html">
 <meta property="og:site_name" content="Long Wang">
-<meta property="og:description" content="Commonly used commandsCommands in linux system are widely used in our daily work nowadays, so let’s take look at the most commonly used commands, refresh memory and pick up some learned but never used">
+<meta property="og:description" content="IntroductionPromise object is a solution for javascript asynchronous operation, provided a unified interface, It is like a proxy, act as an intermediary between asynchronous operations and callback fu">
 <meta property="og:locale" content="English">
-<meta property="og:updated_time" content="2018-05-31T06:45:53.000Z">
+<meta property="og:updated_time" content="2019-06-13T05:38:19.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Command line">
-<meta name="twitter:description" content="Commonly used commandsCommands in linux system are widely used in our daily work nowadays, so let’s take look at the most commonly used commands, refresh memory and pick up some learned but never used">
+<meta name="twitter:title" content="Promise">
+<meta name="twitter:description" content="IntroductionPromise object is a solution for javascript asynchronous operation, provided a unified interface, It is like a proxy, act as an intermediary between asynchronous operations and callback fu">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/24/command/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/04/Promise/"/>
 
 
 
 
 
-  <title>Command line | Long Wang</title>
+  <title>Promise | Long Wang</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/command/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/04/Promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Long Wang">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Command line</h1>
+          <h1 class="post-title" itemprop="name headline">Promise</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T22:32:21-07:00">
-                May 24 2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-04T10:42:02-07:00">
+                Aug 4 2018
               </time>
             
 
@@ -314,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
+                  <a href="/categories/Front-End/" itemprop="url" rel="index">
+                    <span itemprop="name">Front End</span>
                   </a>
                 </span>
 
@@ -351,22 +352,27 @@
       
 
       
-        <h1 id="Commonly-used-commands"><a href="#Commonly-used-commands" class="headerlink" title="Commonly used commands"></a>Commonly used commands</h1><p>Commands in linux system are widely used in our daily work nowadays, so let’s take look at the most commonly used commands, refresh memory and pick up some learned but never used commands to help boost our productivity.</p>
-<h3 id="Terminal-navigation-commands"><a href="#Terminal-navigation-commands" class="headerlink" title="Terminal navigation commands"></a>Terminal navigation commands</h3><p><code>ls</code> - Display a list of files and folders under current directory</p>
-<p><code>cd &lt;directory&gt;</code> - move in to the directory</p>
-<p><code>pwd</code> - Displays the current terminal directory as an absolute path</p>
-<p><code>history</code> - Displays a list of recently used commands</p>
-<h3 id="File-management-commands"><a href="#File-management-commands" class="headerlink" title="File management commands"></a>File management commands</h3><p><code>cat &lt;fileName&gt;</code> - display contents of the file</p>
-<p><code>touch &lt;fileName&gt;</code> - create a new files</p>
-<p><code>cp &lt;from&gt; &lt;to&gt;</code> - copy the file from current directory to target directory</p>
-<p><code>mv &lt;from&gt; &lt;to&gt;</code> - move the file from current directory to target directory</p>
-<p><code>find</code> - Searches a specific directory to find files that match a given set of criteria</p>
-<p><code>grep</code> - Searches a specific file or set of files to see if a given string of text exists, and if it does, tell you where the text exists in those files.</p>
-<p><code>mkdir &lt;directoryName&gt;</code> - create a new directory</p>
-<p><code>rmdir &lt;directoryName&gt;</code> - remove the directory</p>
-<p><code>rm &lt;fileName&gt;</code> - remove file, be careful this will remove the file from your hard drive forever.</p>
-<h3 id="System-management-commands"><a href="#System-management-commands" class="headerlink" title="System management commands"></a>System management commands</h3><p><code>df</code> - displays how much space is used and free on your System</p>
-<p><code>top</code> - displays a list of currently running processes, sort by how much CPU each processes uses.</p>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Promise object is a solution for javascript asynchronous operation, provided a unified interface, It is like a proxy, act as an intermediary between asynchronous operations and callback funcitons. Pormise allows us to write asynchronous operations in synchronous way, no need to deal with callback hells.</p>
+<h2 id="Promise-object"><a href="#Promise-object" class="headerlink" title="Promise object"></a>Promise object</h2><p>Let’s take a look at what a promise object looks like.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function f1(resolve, reject) &#123;</span><br><span class="line">    //asynchronous operations</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = new Promise(f1)</span><br></pre></td></tr></table></figure>
+<p>As we can see from above, the Promise construction function takes a callback function f1 as paramerter, inside the f1 is asynchronous operations. then p1 is a promise instance.</p>
+<p>From Promise design, all asynchronous operatiosn returns a Promise instance. Promise has a <strong>then</strong> method, used to deal with next callback function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var p1 = new Promise(f1);</span><br><span class="line">p1.then(f2);</span><br></pre></td></tr></table></figure>
+<p>After f1 async operation is done, the f2 method will be excuted.<br>Let’s compare the way to write async code between old nested way and promise.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//old way</span><br><span class="line">step1(function (value1) &#123;</span><br><span class="line">  step2(value1, function(value2) &#123;</span><br><span class="line">    step3(value2, function(value3) &#123;</span><br><span class="line">      step4(value3, function(value4) &#123;</span><br><span class="line">        // ...</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//promise </span><br><span class="line">(new Promise(step1))</span><br><span class="line">    .then(step2)</span><br><span class="line">    .then(step3)</span><br><span class="line">    .then(step4)</span><br></pre></td></tr></table></figure>
+<p>As we can see the code become much more readable with Promise.</p>
+<p>##The states of Promise object</p>
+<p>Promise has three states, used to control async opeartions.</p>
+<blockquote>
+<p>async operation pending:  pending<br>async operation succussed: fulfulled<br>async operation failed: rejected</p>
+</blockquote>
+<p>there are only two path:</p>
+<blockquote>
+<p>from ‘pending’ to ‘fulfilled’<br>from ‘pedning’ to ‘rejected’<br>Once state changed, it will never change again, this is also explained the name of ‘Promise’, like in real life we promise something, we either make the promise come true or failed.</p>
+</blockquote>
+<p>##Promise construction function</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var promise = new Promise(function (resolve, reject) &#123;</span><br><span class="line">  // ...</span><br><span class="line"></span><br><span class="line">  if (/* async operation succesed */)&#123;</span><br><span class="line">    resolve(value);</span><br><span class="line">  &#125; else &#123; /* async operation failed */</span><br><span class="line">    reject(new Error());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>there are two arguments ‘resolve’ and ‘reject’, when async operation successed, we call resolve and pass the value to it. On the other hand if failed, we call rejected and pass the error to it.</p>
 
       
     </div>
@@ -382,6 +388,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
 
       
       
@@ -391,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/04/fontSize/" rel="next" title="Font size">
-                <i class="fa fa-chevron-left"></i> Font size
+              <a href="/2018/07/01/ReactNativeFlatList/" rel="next" title="React Native Flat List demo">
+                <i class="fa fa-chevron-left"></i> React Native Flat List demo
               </a>
             
           </div>
@@ -400,10 +412,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/04/centering in CSS/" rel="prev" title="Centering in CSS">
-                Centering in CSS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Commonly-used-commands"><span class="nav-number">1.</span> <span class="nav-text">Commonly used commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Terminal-navigation-commands"><span class="nav-number">1.0.1.</span> <span class="nav-text">Terminal navigation commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-management-commands"><span class="nav-number">1.0.2.</span> <span class="nav-text">File management commands</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-management-commands"><span class="nav-number">1.0.3.</span> <span class="nav-text">System management commands</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise-object"><span class="nav-number">1.1.</span> <span class="nav-text">Promise object</span></a></li></ol></li></ol></div>
             
 
           </div>
